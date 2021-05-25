@@ -1,38 +1,86 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+body{
+  background-color: #424242;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Noto Sans', sans-serif;
+  color: whitesmoke;
+}
+
+.tablero{
+  width: 80vw;
+  min-height: 60vh;
+  background-color: #e65100;
+  border-radius: 5px;
+  margin: 1rem;
+  color: black;
+  font-weight: 600;
+}
+
+.celda{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+h1{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h2{
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.celda:hover{
+  cursor: pointer;
+  /* background-color: #ffddc1; */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.opciones{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1rem;
+}
+
+.opciones > input {
+  font-family: inherit;
+  color: whitesmoke;
+  text-decoration: none;
+  outline: none;
+  border: #e65100 solid;
+  background-color: transparent;
+  padding: .2rem;
+  font-size: large;
+}
+
+.opciones > button, .lose>button{
+  text-decoration: none;
+  outline: none;
+  border: #e65100 solid;
+  background-color: transparent;
+  font-family: inherit;
+  padding: .5rem;
+  color: whitesmoke;
+}
+
+.opciones>button:hover, .lose>button:hover{
+  cursor: pointer;
+  background-color: #e65100;
+}
+
+.lose{
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+::placeholder {
+  color: whitesmoke;
+  opacity: .8; /* Firefox */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
